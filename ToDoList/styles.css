@@ -1,0 +1,111 @@
+/*
+    Linkedin : Dipesh Adelkar
+    Instagram : @x_darkvanilla_x 
+    Github : @x-darkvanilla-x 
+*/
+
+::-webkit-scrollbar
+{
+    width: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #eaeaea;
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-container {
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"] {
+        width: 90%;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: greenyellow;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    color: black;
+}
+
+button:hover {
+    background-color: rgb(151, 252, 1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+li:hover {
+    background-color: #eaeaea;
+}
+
+.edit {
+    background-color: orange;
+}
+
+.edit:hover {
+    background-color: rgb(255, 176, 30);
+}
+
+.del {
+    background-color: red;
+    color: white;
+}
+
+.del:hover {
+    background-color: rgb(253, 70, 70);
+}
+
+.fade-out {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
