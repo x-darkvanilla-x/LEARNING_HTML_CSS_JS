@@ -1,0 +1,97 @@
+/*
+  Author: Dipesh Adelkar
+  Linkedin: Dipesh Adelkar
+  Instagram: @x_darkvanilla_x 
+  Github: @x-darkvanilla-x
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 18px Verdana, sans-serif;
+  color: #FFF;
+  background: #fff;
+}
+#picbox {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;        /* allow shrinking on small screens */
+  padding: 10px;
+}
+#boxcard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center; /* keep cards centered */
+  gap: 10px;               /* spacing between cards */
+}
+.card {
+  flex: 1 1 calc(20% - 10px); /* 4 per row by default */
+  aspect-ratio: 1/1;          /* keep square */
+  perspective: 600px;
+  max-width: 120px;           /* don’t grow too large */
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.card-front {
+  background: #B1B1B1;
+}
+.card-back {
+  transform: rotateY(180deg);
+  background: #fff;
+}
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#boxbuttons {
+  text-align: center;
+  margin: 20px;
+  display: block;
+}
+#boxbuttons .button {
+  text-transform: uppercase;
+  background: #EE872A;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ✅ Responsive Breakpoints */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(33.33% - 10px); /* 3 per row */
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    flex: 1 1 calc(50% - 10px); /* 2 per row */
+  }
+}
+@media (max-width: 350px) {
+  .card {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
